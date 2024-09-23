@@ -1,0 +1,50 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+crossroad = input("You walked along a way and landed at a crossroad, decide if you want to go 'left' or 'right' ")
+
+if crossroad == "left" or crossroad == "Left" or crossroad == "LEFT":#()lower would lower case every letter that gets input to make it easier to program
+    train_station = input("You chose the left way and reached a small train station, you can decide to 'board' "
+                          "the train but it will cost you money or 'walk' along the train tracks ")
+    if train_station == "board" or train_station == "Board":
+        doors = input("The train stops infront of a house, you enter it and find yourself in a room with a 'red' "
+                      "a 'yellow' and a 'blue' door, which one do you choose? ")
+        if doors == "red" or doors == "Red":
+            print("You chose the red door but failed to notice the trap and die. Game over")
+        elif doors == "yellow" or doors == "Yellow":
+            print("You found a Treasure chest and to your surprise it is not locked. You open it and find the treasure. Congratulations")
+        elif doors == "blue" or doors == "Blue":
+            print("In this room sits an old man that starts telling you stories of his lifetime, decide for yourself "
+                  "if this is a treasure for you or not")
+        else:
+            print("Wrong input, please try again")
+    elif train_station == "walk" or train_station == "Walk":
+        print("You get attacked by wolves and fail to defend yourself. Game Over")
+    else:
+        print("Wrong input, please try again")
+elif crossroad == "right" or crossroad == "Right":
+    print("You walk into a dead end and the trees behind you magically block the way so you get lost forever. Game Over")
+else:
+    print("Wrong input, please try again")
