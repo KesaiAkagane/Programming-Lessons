@@ -1,0 +1,50 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+
+images = [rock, paper, scissors]
+
+decision = int(input("Welcome to RPS for Rock type 0, for Paper 1 and for Scissors 2.\n"))
+print(images[decision])
+
+computer = random.randint(0, 2)
+print(f"Computer chose {computer}")
+print(images[computer])
+
+if decision >= 3 or decision <= -1:
+    print("You didn't type a valid choice")
+elif decision == 0 and computer == 2:
+    print("You win")
+elif computer == 0 and decision == 2:
+    print("You lose")
+elif computer > decision:
+    print("You lose")
+elif computer < decision:
+    print("You win")
+elif computer == decision:
+    print("It is a draw")
